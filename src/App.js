@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Components/Layout/Layout";
 import Register from "./Components/Register/Register";
 import Products from "./Components/Products/Products";
@@ -19,7 +19,7 @@ import Cash from "./Components/Payment/Cash/Cash";
 import CheckOut from "./Components/Payment/CheckOut/CheckOut";
 import AllOrders from "./Components/AllOrders/AllOrders";
 import Profile from "./Components/Profile/Profile";
-import { Online, Offline } from "react-detect-offline";
+import { Offline } from "react-detect-offline";
 import Brands from "./Components/Brands/Brands";
 import ForgetPassword from "./Components/ForgetPassword/ForgetPassword";
 import Forgot from "./Components/ForgetPassword/Forgot/Forgot";
@@ -31,7 +31,7 @@ import UserData from "./Components/UpdateData/UserData";
 import Password from "./Components/UpdateData/Password";
 import WishListContextProvider from "./Context/WishListContext";
 import ProtectedAfterLogin from "./Components/ProtectedRoute/ProtectedAfterLogin";
-const Routes = createBrowserRouter([
+const Routes = createHashRouter([
   {
     path: "/",
     element: <Layout />,
